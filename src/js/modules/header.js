@@ -3,9 +3,8 @@ define(['jquery'], () =>{
     constructor(){
       this.load()
     }
-    load(){
-      $('header').load('/html/modules/header.html', () => {
-      })
+    load() {
+      $('header').load('/html/modules/header.html')
     }
   }
   return new Header()

@@ -1,8 +1,11 @@
 require(['./config'],() => {
-  require(['header','footer'], () => {
+  require(['header','footer','banner'], () => {
     class Index {
-      constructor()
-      
+      constructor(){
+        this.banner()
+      }
+      banner(){
+      }
     }
     new Index()
   })
