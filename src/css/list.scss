@@ -10,7 +10,30 @@
   font-size: 14px;
   border-bottom: 1px solid #eae8e4;
   .littleNavRight{
-    //width: ;
+    width: 134px;
     border-left: 1px solid #eae8e4;
+  }
+}
+.classify-list{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  >li{
+    width: 33%;
+    height: 416px;
+    >a{
+      img{
+        width: 341px;
+        height: 341px;
+        margin: 0 auto;
+      }
+    }
+    >p{
+      height: 14px;
+      font-size: 14px;
+      padding-bottom: 2px;
+      padding-left: 4px;
+    }
   }
 }

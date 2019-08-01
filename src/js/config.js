@@ -5,7 +5,9 @@ require.config({
     'header':'/js/modules/header',
     'footer':'/js/modules/footer',
     'banner':'/libs/jquery-plugins/spotlight.bundle',
-    'list':'/js/modules/list'
+    'list':'/js/list',
+    'template':'libs/art-template/template-web',
+    'detail':'/js/detail'
   },
   shim:{
     'banner':{

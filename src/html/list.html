@@ -13,9 +13,19 @@
     <p><b>Monogram手袋</b> [38个产品]</p>
     <div class="littleNavRight">筛选</div>
   </div>
-  <ul>
-    
+  <ul class="classify-list" id="main-goods">
   </ul>
+  <script type="text/html" id="list-template">
+    {{each list item}}
+      <li>
+          <a href="/html/detail.html?id={{item.id}}" target="_blank">
+            <img src="{{item.img}}" />
+          </a>
+        <p>{{item.title}}</p>
+        <p>{{item.price}}</p>
+      </li>
+    {{/each}}
+  </script>
   <footer></footer>
   <script src="/libs/requirejs/require.min.js" data-main="/js/list"></script>
 </body>
