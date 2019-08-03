@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,43 @@
   <title>Document</title>
   <link rel="stylesheet" href="/css/detail.css">
 </head>
+
 <body>
   <header></header>
-    <div class="bigBox">
-      <div class="bigBox-left">
-        <div class="goods">
-
-        </div>
-        <div class="modelling-collocation"></div>
-        <div class="browse-product"></div>
+  <div>
+  </div>
+  <script type="text/html">
+    <div class="goodsBox">
+      <div class="big-goods">
+        <a href=""></a>
+        <img src="" /><!----->
       </div>
-      <div class="bigBox-right">
-        <div class="shopping-cart"></div>
-        <div class="other-functions"></div>
-        <div class="introduce"></div>
+      <div class="small-goods">
+        <ul>
+          {{ each item.imgs img }}
+          <li><img src="{{img}}" /></li><!----->
+          {{/each}}
+        </ul>
       </div>
     </div>
+      <div class="goods-Info">
+        <div class="goods-Info-con">
+          <h1>{{ item.name }}</h1><!----->
+        <p>￥{{ item.price }}</p><!----->
+        <a href="" class="shopping-cart">放入购物袋</a>
+          <p>全国尊享顺丰免费配送</p>
+        </div>
+        <ul class="other-functions">
+          <li>
+            <span>分享</span>
+            <span>添加至愿望清单</span>
+          </li>
+          <li>寻找一家专卖店</li>
+          <li>欢迎致电4006 588 555</li>
+        </ul>
+        <div class="introduce">{{ item.name }}</div><!----->
+    </div>  
+  </script>
   <footer></footer>
   <script src="/libs/requirejs/require.min.js" data-main="/js/detail"></script>
 </body>
