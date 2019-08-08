@@ -7,45 +7,68 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="/css/detail.css">
+  <link rel="stylesheet" href="/css/magnifier.css">
 </head>
 
 <body>
   <header></header>
-  <div>
+  <div id="detail-goods">
   </div>
-  <script type="text/html">
-    <div class="goodsBox">
-      <div class="big-goods">
-        <a href=""></a>
-        <img src="" /><!----->
+  <script type="text/html" id="detail-template">
+    <div class="magnifier" id="magnifier1">
+      <div class="magnifier-container">
+        <div class="images-cover"></div>
+        <div class="move-view"></div>
       </div>
-      <div class="small-goods">
-        <ul>
-          {{ each item.imgs img }}
-          <li><img src="{{img}}" /></li><!----->
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-      <div class="goods-Info">
-        <div class="goods-Info-con">
-          <h1>{{ item.name }}</h1><!----->
-        <p>￥{{ item.price }}</p><!----->
-        <a href="" class="shopping-cart">放入购物袋</a>
-          <p>全国尊享顺丰免费配送</p>
+      <div class="magnifier-assembly">
+        <div class="magnifier-btn">
+          <span class="magnifier-btn-left">&lt;</span>
+          <span class="magnifier-btn-right">&gt;</span>
         </div>
-        <ul class="other-functions">
-          <li>
-            <span>分享</span>
-            <span>添加至愿望清单</span>
-          </li>
-          <li>寻找一家专卖店</li>
-          <li>欢迎致电4006 588 555</li>
-        </ul>
-        <div class="introduce">{{ item.name }}</div><!----->
+        <div class="magnifier-line">
+          <ul class="clearfix animation03">
+            {{ each detail.imgs img }}
+            <li>
+              <div class="small-img">
+                <img src="{{img}}" />
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div class="magnifier-view"></div>
+    </div>
+    <div class="goods-Info">
+      <div class="goods-Info-con">
+        <h1>{{ detail.name }}</h1><!----->
+        <p>￥{{ detail.price }}</p><!----->
+        <a href="javascript:;" class="shopping-cart" id="add-cart">放入购物袋</a>
+        <p>全国尊享顺丰免费配送</p>
+      </div>
+      <ul class="other-functions">
+        <li>
+          <span>分享</span>
+          <span>添加至愿望清单</span>
+        </li>
+        <li>寻找一家专卖店</li>
+        <li>欢迎致电4006 588 555</li>
+      </ul>
+      <div class="introduce">{{ detail.introduce }}</div>
     </div>  
   </script>
   <footer></footer>
   <script src="/libs/requirejs/require.min.js" data-main="/js/detail"></script>
 </body>
 </html>
+
+<!-- <div class="big-goods">
+  <img src="" />
+</div>
+<div class="small-goods">
+  <ul>
+    {{ each detail.imgs img }}
+    <li><img src="{{img}}" /></li>
+    {{/each}}
+  </ul>
+</div> -->

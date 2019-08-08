@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+  <header></header>
+  <div id="add-to-cart">
+
+  </div>
+  <script type="text/html" id="addToCart">
+    <h1>我的购物袋</h1>
+    <div class="goods-info">
+      {{each cart detail}}
+      <ul class="goods-info-important" data-id="{{detail.id}}">
+        <li><input type="checkbox" class="check"></li>
+        <li><img src="{{detail.imgs[0]}}" /></li>
+        <li>
+          <ul>
+            <li><b>产品名称：</b>{{detail.name}} </li>
+            <li><b>产品型号：</b>{{detail.name}} </li>
+            <li><b>产品颜色：</b>{{detail.name}} </li>
+            <li><b>产品材质：</b>{{detail.name}} </li>
+          </ul>
+        </li>
+        <li class="spanBox">
+          <span class="reduce-num">-</span> 
+          <input type="text" class="cart-num" value="{{detail.num}}"> 
+          <span class="increase-num">+</span>  
+        </li>
+        <li><b>单价:</b><span>￥{{detail.price.toFixed(0)}}</span></li>
+        <li><b>小计:</b>  <span><span>￥</span><span class="product-cost">{{(detail.num*detail.price).toFixed(0)}}</span></span></li>
+        <li><button class="remove-goods">删除</button>
+        </li>
+      </ul>
+      {{/each}}
+
+      <div class="calc">
+        <div class="all-Check">
+          全选  <input type="checkbox" class="allCheck">
+        </div>
+        <div class="allPrice">
+          <span>总金额</span>  <span><span>￥</span><span class="cart-allPrice"></span></span> 
+        </div>
+      </div>  
+
+      <div class="submit">
+        <button>提交</button>
+      </div>
+      
+    </div>
+  </script>
+<footer></footer>
+<script src="/libs/requirejs/require.min.js" data-main="/js/cart"></script>
+</body>
+</html>

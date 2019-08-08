@@ -1,16 +1,25 @@
 require.config({
   baseUrl:'/',
   paths:{
-    'jquery':'/libs/jquery/jquery-3.4.1.min',
+    'jquery':'/libs/jquery-plugins/jquery-1.11.3.min',
     'header':'/js/modules/header',
     'footer':'/js/modules/footer',
-    'banner':'/libs/jquery-plugins/spotlight.bundle',
+    'carousel': '/libs/jquery-plugins/carousel',
     'list':'/js/list',
     'template':'libs/art-template/template-web',
-    'detail':'/js/detail'
+    'detail':'/js/detail',
+    'cart':'/js/cart',
+    'magnifier':'/libs/jquery-plugins/magnifier',
+    'fly':'/libs/jquery-plugins/jquery.fly.min'
   },
   shim:{
-    'banner':{
+    'carousel':{
+      deps:['jquery']
+    },
+    'magnifier':{
+      deps:['jquery']
+    },
+    'fly':{
       deps:['jquery']
     }
   }
