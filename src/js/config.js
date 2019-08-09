@@ -10,7 +10,8 @@ require.config({
     'detail':'/js/detail',
     'cart':'/js/cart',
     'magnifier':'/libs/jquery-plugins/magnifier',
-    'fly':'/libs/jquery-plugins/jquery.fly.min'
+    'fly':'/libs/jquery-plugins/jquery.fly.min',
+    'cookie':'/libs/jquery-plugins/jquery.cookie',
   },
   shim:{
     'carousel':{
@@ -20,6 +21,9 @@ require.config({
       deps:['jquery']
     },
     'fly':{
+      deps:['jquery']
+    },
+    'cookie':{
       deps:['jquery']
     }
   }

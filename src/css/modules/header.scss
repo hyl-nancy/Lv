@@ -43,8 +43,17 @@ ul,li{
       font-size: 12px;
       line-height: 59px;
     }
+    .login-register{
+      cursor: pointer;
+      width: 75px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     .nav-3{
-      width: 80px;
+      cursor: pointer;
+      width: 90px;
       height: 60px;
       display: flex;
       align-items: center;
